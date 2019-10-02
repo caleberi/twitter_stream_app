@@ -1,0 +1,1 @@
+express,bodyparser,brcypt//uss_id,twitter_stream_api,aws_kafka module,[npm install kafka-node --no-optional --save]

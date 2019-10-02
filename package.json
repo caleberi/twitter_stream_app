@@ -1,0 +1,26 @@
+{
+  "name": "twitter_cli",
+  "version": "1.0.0",
+  "description": "A pure nodejs twitter to AWS KAFKA  streaming api",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS KAFKA",
+    "TWITTER",
+    "NODE JS"
+  ],
+  "author": "hebronace",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-kafka-node": "0.1.0-preview.2",
+    "colors": "^1.4.0",
+    "kafka-node": "^4.1.3",
+    "twit": "^2.2.11",
+    "twitter-stream-api": "^0.5.2"
+  }
+}
