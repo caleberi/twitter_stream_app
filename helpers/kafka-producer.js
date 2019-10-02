@@ -8,13 +8,13 @@ class KafkaProducerInterface {
                 this.host = kafkaHost;
         }
         // creates a kafka client
-        createClient() {
-                return new Kafka.KafkaClient();
+        createClient(host) {
+                return new Kafka.KafkaClient(host);
         }
 
         // return  an instances of  a  kafka_producer
         createProducer(option = {}) {
-                var client = this.createClient();
+                var client = this.createClient(this.host);
                 return new KafkaProducer(client, option);
         }
 
@@ -36,6 +36,7 @@ class KafkaProducerInterface {
                         }
                         else{
                                 //this.kafkaLogger(err)
+                                console.log("err");
                         throw  new Error(err);
                         }
                 });

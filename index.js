@@ -27,6 +27,7 @@ tw_api.Twitter()
                         tweet.text
                 );
 
+                console.log(JSON.stringify(temp.objectify()))
                 // setting the host  and options
                 var kafkaHost = {
                         kafkaHost:

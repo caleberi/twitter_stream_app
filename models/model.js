@@ -13,6 +13,8 @@ class Model {
         }
         
         objectify(){
+                
+                
                 return {
                         "tweet_id":this.tweet_id ,
                         "source":this.source,
