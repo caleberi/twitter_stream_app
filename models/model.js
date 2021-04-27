@@ -20,7 +20,7 @@ class Model {
     this.followers = followers;
     this.user_id = user_id;
     this.tweet_id = tweet_id;
-    this.tweet = this.tweet;
+    this.tweet = tweet;
   }
 
   objectify() {

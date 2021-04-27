@@ -1,7 +1,8 @@
 const TwitterStreamInterface = require("./helpers/twitter.js");
 var userModel = require("./models/model");
-const { keyword } = require("./search/tags");
+const { createKeyword } = require("./search/tags");
 const producer = require("./helpers/kafka-producer");
+const { keywords } = require("./configs/settings");
 
 var tw_api = new TwitterStreamInterface(
   "dz9XC0e99nHqlneDA1n4JiNsd",
@@ -12,7 +13,7 @@ var tw_api = new TwitterStreamInterface(
 
 tw_api
   .Twitter()
-  .stream("statuses/filter", { track: keyword })
+  .stream("statuses/filter", { track: createKeyword(...keywords) })
   .on("tweet", (tweet) => {
     var temp = new userModel(
       tweet.user.id,

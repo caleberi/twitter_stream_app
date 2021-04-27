@@ -1,6 +1,7 @@
-const keyword = ["Nigeria", "Buhari", "Lagos"];
-
+function createKeyword(...args) {
+  return [...args];
+}
 
 module.exports = {
-        keyword
+  createKeyword,
 };
